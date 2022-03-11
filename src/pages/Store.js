@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container } from '../styles/center';
-
-const Images = () => {
+// Dummy content for one of our paths
+const Store = () => {
   return (
     <Container>
-      <h1>Images</h1>
+      <h1>Store</h1>
     </Container>
   );
 };
 
-export default Images;
+export default Store;

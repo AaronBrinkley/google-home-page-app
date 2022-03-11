@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { Link } from 'react-router-dom';
 
+//I used styled-components to consolidate css & initialize functional components
 
 const Nav = styled.nav`
   display: flex;
@@ -33,6 +34,8 @@ const RightLinks = styled.div`
   align-items: center;
 `;
 
+//This is where we consolidate our functional components to be further defined with routes, methods, etc. 
+//Gets exported to App.js
 const Navbar = () => {
   return (
     <Nav>
