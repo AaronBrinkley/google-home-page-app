@@ -117,41 +117,24 @@ const MicIcon = styled.div`
   }
 `;
 
-
 const Footer = styled.div`
   display: flex;
   flex-wrap: wrap;
   position: fixed;
   bottom: 0;
   flex-shrink: 0;
-  box-sizing: border-box
+  box-sizing: border-box;
   align-items: center;
   height: 93.5px;
-  width: 100%;
   font-size: 14px;
   background: #f2f2f2;
   justify-content: space-between;
-  
-  
+  width: 100vw;
+
   @media only screen and (max-width: 1200px) {
-    
     justify-content: space-evenly;
-  
-};
-
-
-    
-  flex-grow: 300;
-
-
-
-  padding: 0 20px;
-  border-bottom: 1px solid #dadce0;
-  font-size: 15px;
-  color: #70757a;
-
+  }
 `;
-
 
 const FooterLinks = styled(Link)`
   display: flex;
@@ -159,6 +142,10 @@ const FooterLinks = styled(Link)`
   align-items: center;
   text-decoration: none;
   color: #70757a;
+  svg {
+    height: 24px;
+    width: 24px;
+  }
 `;
 
 const LeftFooterLinks = styled.div`
@@ -174,7 +161,6 @@ const RightFooterLinks = styled.div`
   display: flex;
   padding: 10px;
   margin-right: 16px;
-  align-items: center;
   justify-content: flex-end;
   min-width: 30%;
   order: 3;
@@ -194,7 +180,9 @@ const CenterFooterLink = styled.div`
   }
 `;
 
-//This is where we consolidate our functional components to be further defined with routes, methods, etc. 
+const ImageLink = styled.div``;
+
+//This is where we consolidate our functional components to be further defined with routes, methods, etc.
 //Gets exported to App.js
 const Home = () => {
   return (
@@ -248,19 +236,20 @@ const Home = () => {
       </SearchSection>
       <Footer data-sfe="true" data-sfsw="1200" jsaction="rcuQ6b:npT2md">
         <LeftFooterLinks>
-          <FooterLinks to="/">Advertising</FooterLinks>
-          <FooterLinks to="/">Business</FooterLinks>
+          <FooterLinks to="/advertising">Advertising</FooterLinks>
+          <FooterLinks to="/business">Business</FooterLinks>
           <FooterLinks to="/">How Search Works</FooterLinks>
         </LeftFooterLinks>
 
         <CenterFooterLink>
+          <ImageLink></ImageLink>
           <FooterLinks to="/">Carbon neutral since 2007</FooterLinks>
         </CenterFooterLink>
 
         <RightFooterLinks>
-          <FooterLinks to="/">Privacy</FooterLinks>
-          <FooterLinks to="/">Terms</FooterLinks>
-          <FooterLinks to="/">Settings</FooterLinks>
+          <FooterLinks to="/privacy">Privacy</FooterLinks>
+          <FooterLinks to="/terms">Terms</FooterLinks>
+          <FooterLinks to="/settings">Settings</FooterLinks>
         </RightFooterLinks>
       </Footer>
     </Container>
