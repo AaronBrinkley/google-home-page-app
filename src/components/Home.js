@@ -9,6 +9,16 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
+const SubContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  align-items: center;
+  min-height: 290px;
+  height: calc(100% - 560px);
+`;
+
 const LogoSection = styled.div`
   display: flex;
   flex-direction: column;
@@ -34,6 +44,7 @@ const Form = styled.form``;
 const Search = styled.div`
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   padding: 0px 14px;
   background: #fff;
   border: 1px solid #dfe1e5;
@@ -121,6 +132,7 @@ const Footer = styled.div`
   display: flex;
   flex-wrap: wrap;
   position: fixed;
+  padding: 0 20px;
   bottom: 0;
   flex-shrink: 0;
   box-sizing: border-box;
@@ -180,19 +192,31 @@ const CenterFooterLink = styled.div`
   }
 `;
 
-const ImageLink = styled.div``;
+const ImageLink = styled.div`
+  display: flex;
+  height: 14px;
+  margin-right: 6px;
+`;
+
+const Span = styled.div`
+flex-shrink: 0;
+  flex-grow: 1;
+  box-sizing: border-box;
+`;
 
 //This is where we consolidate our functional components to be further defined with routes, methods, etc.
 //Gets exported to App.js
 const Home = () => {
   return (
     <Container>
+      <SubContainer>
       <LogoSection>
         <img
           src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
           alt="google-logo"
         />
       </LogoSection>
+      </SubContainer>
       <SearchSection>
         <Form action="/" method="GET" role="search">
           <Search>
@@ -234,6 +258,7 @@ const Home = () => {
           <button>I'm Feeling Lucky</button>
         </ButtonSection>
       </SearchSection>
+      <Span></Span>
       <Footer data-sfe="true" data-sfsw="1200" jsaction="rcuQ6b:npT2md">
         <LeftFooterLinks>
           <FooterLinks to="/advertising">Advertising</FooterLinks>
@@ -242,7 +267,9 @@ const Home = () => {
         </LeftFooterLinks>
 
         <CenterFooterLink>
-          <ImageLink></ImageLink>
+          <ImageLink>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC"></img>
+          </ImageLink>
           <FooterLinks to="/">Carbon neutral since 2007</FooterLinks>
         </CenterFooterLink>
 
