@@ -4,6 +4,19 @@ import { Link } from "react-router-dom";
 
 //I used styled-components to consolidate css & initialize functional components
 
+const Wrapper = styled.div`
+padding-top: 50px;
+background: #f2f2f2;
+height: 100%;
+flex-shrink: 0;
+flex-flow: row wrap;
+padding: 20px;
+justify-content: space-around;
+box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+align-content: flex-start;
+overflow: auto;
+`;
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -137,7 +150,7 @@ const Footer = styled.div`
   flex-shrink: 0;
   box-sizing: border-box;
   align-items: center;
-  height: 93.5px;
+  height: 99.5px;
   font-size: 14px;
   background: #f2f2f2;
   justify-content: space-between;
@@ -209,6 +222,7 @@ flex-shrink: 0;
 const Home = () => {
   return (
     <Container>
+      <Wrapper>
       <SubContainer>
       <LogoSection>
         <img
@@ -258,6 +272,7 @@ const Home = () => {
           <button>I'm Feeling Lucky</button>
         </ButtonSection>
       </SearchSection>
+      </Wrapper>
       <Span></Span>
       <Footer data-sfe="true" data-sfsw="1200" jsaction="rcuQ6b:npT2md">
         <LeftFooterLinks>
@@ -279,6 +294,7 @@ const Home = () => {
           <FooterLinks to="/settings">Settings</FooterLinks>
         </RightFooterLinks>
       </Footer>
+      
     </Container>
   );
 };
